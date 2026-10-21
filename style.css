@@ -1,0 +1,29 @@
+/* Pre-CFG Master: keep Red / Green / Blue on one row in narrow columns
+   (Lobe Theme sidebars, Forge's extra-networks tab). Scoped to .pcm-rgb only.
+   Doubled class instead of .gradio-slider: that class is added by the webui,
+   bare gradio 3.41 does not have it. */
+.pcm-rgb.pcm-rgb {
+    min-width: 0 !important;
+}
+
+/* When even that is too narrow, the number box drops under the label
+   instead of clipping it. */
+.pcm-rgb .head {
+    gap: 2px 4px;
+    flex-wrap: wrap;
+}
+
+.pcm-rgb .head label {
+    min-width: 0;
+    white-space: nowrap;
+}
+
+.pcm-rgb input[type="number"] {
+    flex: 0 0 auto !important;
+    width: 3.6em !important;
+    min-width: 0 !important;
+    margin-left: auto;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+    text-align: center;
+}
